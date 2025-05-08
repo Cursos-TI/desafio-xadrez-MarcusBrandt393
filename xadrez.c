@@ -1,25 +1,41 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main(){
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+int linha, coluna, l, c;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+printf("Movimento de um bispo no xadrez\n");;
+printf("Digite a linha que o bispo se encontra: ");
+scanf("%d", &linha);
+printf("Digite a coluna que o bispo se encontra: ");
+scanf("%d", &coluna);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+printf("\nMovimentos possiveis:\n\n");
+printf("      1  2  3  4  5  6  7  8  \n");
+printf("   -------------------------\n");
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+l = 1;
+while(l <= 8){
+    printf("%3d |", l);
+    l++;
+    
+    c = 1;
+    while(c <= 8){
+        if(l == linha && c == coluna){
+            printf(" o ");
+        }
+        if(l == linha || c == coluna){
+            printf(" x ");
+        }
+        else{
+            printf(" - ");
+        }
+        c++;
+    }
+    printf("\n");
+}
+return 0;
+} movimentação horizontal e outro vertical.
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
